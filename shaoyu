@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>游戏下载 & JPAI介绍</title>
+  <!-- 引入 Font Awesome 图标库 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #1a1a1a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 0px;
+    }
+    .btn {
+      background: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+      display: inline-block;
+      text-decoration: none;
+      border: none;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+
+    /* 金色框样式 */
+    .gold-box {
+      border: 2px solid #FFD700;
+      color: #FFD700;
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 12px;
+      margin: 15px auto;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* 弹窗背景 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    /* 弹窗内容 */
+    .modal-content {
+      background: #fff;
+      color: #333;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .modal h2 {
+      color: #f1a800;
+      margin-bottom: 10px;
+    }
+    .modal p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .modal-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 90%;
+      margin: 10px auto;
+      padding: 12px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    .modal-btn i {
+      font-size: 18px;
+    }
+    .android {
+      background: #f1a800;
+      color: #000;
+    }
+    .ios {
+      background: #f1a800;
+      color: #000;
+    }
+    .cancel {
+      background: #ccc;
+      color: #000;
+    }
+
+    /* 折叠按钮 */
+    .accordion {
+      background-color: #2b2b2b;
+      color: #FFD700;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 90%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px auto;
+      transition: background-color 0.3s;
+    }
+
+    .accordion:hover {
+      background-color: #3a3a3a;
+    }
+
+    /* 箭头 */
+    .accordion::after {
+      content: '▼';
+      font-size: 14px;
+      color: #FFD700;
+      transition: transform 0.3s;
+    }
+    .accordion.active::after {
+      transform: rotate(180deg);
+    }
+
+    /* 折叠内容 */
+    .panel {
+      padding: 15px 20px;
+      display: none;
+      background-color: #333;
+      color: #fff;
+      margin: 0 auto 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 1.6;
+      width: 85%;
+      text-align: left;
+    }
+
+    .panel span {
+      color: #FFD700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- 标题和副标题金色框 -->
+<div class="gold-box">
+  <img src="https://www.helloimg.com/i/2025/08/17/68a1b98950cd8.png" 
+       alt="logo" 
+       width="60" 
+       style="vertical-align: middle; margin-right: 6px;">
+  903.vip 新葡京集團
+</div>
+
+  <br>
+  <div class="gold-box">快速接入专员服务通道，实时响应您的需求</div>
+  </br>
+
+  <!-- 主按钮 -->
+  <button class="btn" onclick="openModal('gameModal')">🎮游戏下载</button>
+  <a href="https://myjpai.cn/home" class="btn">🚀JPAI下载</a>
+  <a href="https://jtk3a0vuor.8dci310d.com/1343cf58269a47jkfle-keli3cf88061a070b05000a0a03040208050b01000f0604038ee20d0541ce542b9e4" class="btn">👸客服专员</a>
+  <a href="https://jpai.one/usingTutorials" class="btn">📖JPAI使用教程</a>
+
+  <!-- 折叠按钮 + 内容 -->
+  <button class="accordion">什么是 JPAI?</button>
+  <div class="panel">
+    <p>👉 掌握未来，畅想变革</p>
+    <p>在JPAI，我们将安全，私密，免费，快速，交易五大要素完美融合，打造最理想的加密聊天环境与高效即时交易厅。</p>
+    <p>下载JPAI，尽享前所未有的隐私保护，极速沟通与便捷支付的全新体验！</p>
+  </div>
+<button class="accordion">如何查询返水比例？</button>
+  <div class="panel">
+    <p>👉 登录游戏后点击【洗码】，右上角进入【VIP返水详情】，即可查看您对应等级的返水比例。</p>
+  </div>
+<button class="accordion">新人如何领取首存/专享新人活动</button>
+  <div class="panel">
+    <p>🎁首存：登录游戏点击【首页】或【我的】中的【充值】，勾选新人礼包即可参与首存返利。</p>
+    <p>🔥新人专享：点击【活动】可查看【新人专享】与闯关任务，注册15天内可参与。</p>
+    <p>⚠️闯关活动为24小时自助领取，请及时参与！</p>
+  </div>
+
+  <button class="accordion">如何领取周工资/月工资？</button>
+  <div class="panel">
+    <p>登录游戏点击【我的】→【查看VIP详情】→【领取奖励】即可。</p>
+    <p>💰 周工资：满足周期充值或投注积分要求，即可于每周三领取，星期天未领取视为放弃。</p>
+    <p>💰 月工资：满足上月充值或投注积分要求，即可于本月2号领取，截止9号未领取视为放弃。</p>
+  </div>
+
+  <!-- 游戏下载弹窗 -->
+  <div id="gameModal" class="modal">
+    <div class="modal-content">
+      <h2>游戏下载平台</h2>
+      <p>请选择您的设备类型进行下载</p>
+      <button class="modal-btn android" onclick="window.location.href='https://x9997.cc/download'">
+        <i class="fab fa-android"></i> 安卓下载
+      </button>
+      <button class="modal-btn ios" onclick="window.location.href='https://apps.apple.com/app/id6749854670'">
+        <i class="fab fa-apple"></i> 苹果下载
+      </button>
+      <button class="modal-btn cancel" onclick="closeModal('gameModal')">取消</button>
+    </div>
+  </div>
+
+  <script>
+    // 打开弹窗
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    // 关闭弹窗
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    // 折叠面板控制
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
